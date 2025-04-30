@@ -155,9 +155,8 @@ jobs:
           CIBW_BEFORE_BUILD_LINUX: bash ./build_tools/wheels/cibw_before_build_linux.sh
           CIBW_BEFORE_BUILD_WINDOWS: >
             C:\Miniconda\condabin\conda.bat create --prefix "D:\build-env" conda-forge::eccodes &&
-            ls D:\build-env && echo "include" &&
-            ls D:\build-env\include && echo "include" &&
-            ls D:\build-env\lib
+            ls D:\build-env &&
+            ls D:\build-env\Library
           CIBW_ENVIRONMENT_WINDOWS: ECCODES_DIR="D:\build-env"
           #
           #
