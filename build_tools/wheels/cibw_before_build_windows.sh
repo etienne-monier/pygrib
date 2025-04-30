@@ -11,23 +11,23 @@ mkdir /dependencies
 # LIBAEC INSTALLATION
 #
 
-mkdir /dependencies/aec
-cd /dependencies/aec
+# mkdir /dependencies/aec
+# cd /dependencies/aec
 
-# Get Source code
-STEM="libaec-v${AEC_VERSION}"
-curl https://gitlab.dkrz.de/k202009/libaec/-/archive/v${AEC_VERSION}/${STEM}.tar.gz \
-  --output ${STEM}.tar.gz
-tar -xf "${STEM}.tar.gz"
+# # Get Source code
+# STEM="libaec-v${AEC_VERSION}"
+# curl https://gitlab.dkrz.de/k202009/libaec/-/archive/v${AEC_VERSION}/${STEM}.tar.gz \
+#   --output ${STEM}.tar.gz
+# tar -xf "${STEM}.tar.gz"
 
-# Build and install
-mkdir build
-cd build
-cmake -DCMAKE_INSTALL_PREFIX=${ECCODES_DIR} ../${STEM}
+# # Build and install
+# mkdir build
+# cd build
+# cmake -DCMAKE_INSTALL_PREFIX=${ECCODES_DIR} ../${STEM}
 
-ls
+# ls
 
-make install
+# make install
 
 # ECCODES INSTALLATION
 #
