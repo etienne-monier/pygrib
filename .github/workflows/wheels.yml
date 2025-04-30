@@ -31,10 +31,10 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          # # Window 64 bit
-          # - os: windows-latest
-          #   python: 310
-          #   platform_id: win_amd64
+          # Window 64 bit
+          - os: windows-latest
+            python: 310
+            platform_id: win_amd64
           # - os: windows-latest
           #   python: 311
           #   platform_id: win_amd64
