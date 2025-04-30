@@ -4,8 +4,10 @@ set -euxo pipefail
 
 ECCODES_VERSION=2.41.0
 ECCODES_DIR=/usr/local
+
 cat /etc/*-release
-apt-get install libaec-dev
+
+yum -y install libaec-devel
 
 # ECCODES INSTALLATION
 #
