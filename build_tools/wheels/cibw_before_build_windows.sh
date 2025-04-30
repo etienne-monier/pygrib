@@ -24,6 +24,7 @@ tar -xf "${STEM}.tar.gz"
 mkdir build
 cd build
 cmake -DCMAKE_INSTALL_PREFIX=${ECCODES_DIR} ../${STEM}
+cat Makefile
 make install
 
 # ECCODES INSTALLATION
