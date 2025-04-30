@@ -153,7 +153,7 @@ jobs:
           # For windows, this should be compiled.
           #
           CIBW_BEFORE_BUILD_LINUX: bash ./build_tools/wheels/cibw_before_build_linux.sh
-          CIBW_BEFORE_BUILD_WINDOWS: C:\Miniconda\condabin\conda.bat create --name build --prefix "${{ github.workspace}}/build-env" eccodes # bash ./build_tools/wheels/cibw_before_build_windows.sh "${{ .github.workspace}}/build-env"
+          CIBW_BEFORE_BUILD_WINDOWS: C:\Miniconda\condabin\conda.bat create --prefix "${{ github.workspace}}/build-env" eccodes # bash ./build_tools/wheels/cibw_before_build_windows.sh "${{ .github.workspace}}/build-env"
           CIBW_ENVIRONMENT_WINDOWS: ECCODES_DIR="${{ github.workspace}}/build-env"
           #
           #
