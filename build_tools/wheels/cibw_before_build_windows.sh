@@ -2,11 +2,11 @@
 
 set -euxo pipefail
 
-AEC_VERSION=1.1.3
-ECCODES_VERSION=2.41.0
-ECCODES_DIR=/usr/local
+# AEC_VERSION=1.1.3
+# ECCODES_VERSION=2.41.0
+# ECCODES_DIR=/usr/local
 
-mkdir /dependencies
+# mkdir /dependencies
 
 # LIBAEC INSTALLATION
 #
@@ -32,18 +32,25 @@ mkdir /dependencies
 # ECCODES INSTALLATION
 #
 
-mkdir /dependencies/eccodes
-cd /dependencies/eccodes
+# mkdir /dependencies/eccodes
+# cd /dependencies/eccodes
 
-# Get Source code
-STEM="eccodes-${ECCODES_VERSION}-Source"
-curl https://confluence.ecmwf.int/download/attachments/45757960/${STEM}.tar.gz\?api\=v2 \
-  --output ${STEM}.tar.gz
-tar -xf "${STEM}.tar.gz"
+# # Get Source code
+# STEM="eccodes-${ECCODES_VERSION}-Source"
+# curl https://confluence.ecmwf.int/download/attachments/45757960/${STEM}.tar.gz\?api\=v2 \
+#   --output ${STEM}.tar.gz
+# tar -xf "${STEM}.tar.gz"
 
-# Build and install
-mkdir build
-cd build
-cmake -DCMAKE_INSTALL_PREFIX=${ECCODES_DIR} ../${STEM}
-make
-make install
+# # Build and install
+# mkdir build
+# cd build
+# cmake -DCMAKE_INSTALL_PREFIX=${ECCODES_DIR} ../${STEM}
+# make
+# make install
+
+# conda create --name build --prefix ${} eccodes
+
+C:\Miniconda\condabin\conda.bat create --prefix "D:\build-env" conda-forge::eccodes # bash ./build_tools/wheels/cibw_before_build_windows.sh "${{ .github.workspace}}/build-env"
+ls D:\build-env
+ls D:\build-env\include
+ls D:\build-env\lib
