@@ -7,20 +7,21 @@ ECCODES_DIR=/usr/local
 
 cat /etc/*-release
 
-yum -y install libaec-devel
+yum makecache
+yum -y install libaec-devel eccodes-devel
 
 # ECCODES INSTALLATION
 #
 
-# Get Source code
-STEM="eccodes-${ECCODES_VERSION}-Source"
-curl https://confluence.ecmwf.int/download/attachments/45757960/${STEM}.tar.gz\?api\=v2 \
-  --output ${STEM}.tar.gz
-tar -xf "${STEM}.tar.gz"
+# # Get Source code
+# STEM="eccodes-${ECCODES_VERSION}-Source"
+# curl https://confluence.ecmwf.int/download/attachments/45757960/${STEM}.tar.gz\?api\=v2 \
+#   --output ${STEM}.tar.gz
+# tar -xf "${STEM}.tar.gz"
 
-# Build and install
-mkdir build
-cd build
-cmake -DCMAKE_INSTALL_PREFIX=${ECCODES_DIR} ../${STEM}
-make
-make install
+# # Build and install
+# mkdir build
+# cd build
+# cmake -DCMAKE_INSTALL_PREFIX=${ECCODES_DIR} ../${STEM}
+# make
+# make install
