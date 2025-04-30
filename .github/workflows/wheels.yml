@@ -156,7 +156,8 @@ jobs:
           CIBW_BEFORE_BUILD_WINDOWS: >
             C:\Miniconda\condabin\conda.bat create --prefix "D:\build-env" conda-forge::eccodes &&
             ls D:\build-env &&
-            ls D:\build-env\Library
+            echo "lib" && ls D:\build-env\Library\lib &&
+            echo "include" && ls D:\build-env\Library\include
           CIBW_ENVIRONMENT_WINDOWS: ECCODES_DIR="D:\build-env\Library"
           #
           #
