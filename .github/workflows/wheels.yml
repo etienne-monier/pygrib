@@ -154,7 +154,7 @@ jobs:
           #
           CIBW_BEFORE_BUILD_LINUX: bash ./build_tools/wheels/cibw_before_build_linux.sh
           CIBW_BEFORE_BUILD_WINDOWS: >
-            C:\Miniconda\condabin\conda.bat create --prefix "D:\build-env" conda-forge::eccodes # bash ./build_tools/wheels/cibw_before_build_windows.sh "${{ .github.workspace}}/build-env"
+            C:\Miniconda\condabin\conda.bat create --prefix "D:\build-env" conda-forge::eccodes
             ls D:\build-env
             ls D:\build-env\include
             ls D:\build-env\lib
